@@ -166,10 +166,6 @@
   path = vim/bundle/austintaylor-vim-indentobject
   url = https://github.com/austintaylor/vim-indentobject
   ignore = dirty
-[submodule "vim/bundle/jpalardy-vim-slime"]
-  path = vim/bundle/jpalardy-vim-slime
-  url = https://github.com/jpalardy/vim-slime
-  ignore = dirty
 [submodule "vim/bundle/vim-scripts-ZoomWin"]
   path = vim/bundle/vim-scripts-ZoomWin
   url = https://github.com/vim-scripts/ZoomWin.git
@@ -299,6 +295,6 @@
   url = https://github.com/briandoll/change-inside-surroundings.vim.git
   ignore = dirty
 [submodule "vim/bundle/timcharper-textile"]
-  path = vim/bundle/timcharper-textile
+	path = vim/bundle/timcharper-textile
   url = https://github.com/timcharper/textile.vim.git
   ignore = dirty

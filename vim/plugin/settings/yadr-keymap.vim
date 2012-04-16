@@ -38,10 +38,8 @@ imap <silent> <D-d> _
 imap <silent> <D-K> -
 imap <silent> <D-D> -
 
-" Use the two first fingers on both sides of the keyboard
-" simultaneously to go to the beginning or end of line
-Arpeggio nnoremap jk $
-Arpeggio nnoremap fd 0
+" gary bernhardt's hashrocket
+imap <c-l> <space>=><space>
 
 " Change inside quotes with Cmd-" and Cmd-'
 nnoremap <D-'> ci'
@@ -141,9 +139,11 @@ map <silent> <D-9> :tabn 9<cr>
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
-" Resize vertical windows by hitting plus and minus
-nnoremap <silent> + <C-w>+
-nnoremap <silent> - <C-w>-
+" Resize windows with arrow keys
+nnoremap <Up> <C-w>+
+nnoremap <Down> <C-w>-
+nnoremap <Left> <C-w><
+nnoremap <Right>  <C-w>>
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi
@@ -158,6 +158,7 @@ imap <silent> <C-J> <%  %><Esc>2hi
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>

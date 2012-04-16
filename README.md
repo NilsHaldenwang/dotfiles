@@ -83,7 +83,7 @@ Homebrew is _the missing package manager for OSX_. To install:
 With homebrew installed, install some packages:
 
 ```bash
-brew install ack ctags git hub imagemagick macvim
+brew install ack ctags git hub macvim
 ```
 
 ### [ctags](http://ctags.sourceforge.net/)
@@ -174,7 +174,7 @@ To make your life easier, create a `zsh` folder in your Dropbox (or as a git rep
 ln -s ~/Dropbox/path/to/zsh ~/.yadr/custom/zsh
 ```
 
-Create as many `whatever.before.zsh` or `whatever.after.zsh` files as you need within the `zsh` directory. Please see `custom/zsh.sample` for
+Create as many `before/whatever.zsh` or `after/whatever.zsh` files as you need within the `zsh` directory. Please see `custom/zsh.sample` for
 an example.
 
 
@@ -231,7 +231,7 @@ your `~/.secrets` file which is automatically referenced by the provided zshrc:
   * `git cp` - cherry-pick -x (showing what was cherrypicked)
   * `git changelog` - a nice format for creating changelogs
   * Some sensible default configs, such as improving merge messages, push only pushes the current branch, removing status hints, and using mnemonic prefixes in diff: (i)ndex, (w)ork tree, (c)ommit and (o)bject
-  * Slightly imrpoved colors for diff
+  * Slightly improved colors for diff
   * `git unstage` (remove from index) and `git uncommit` (revert to the time prior to the last commit - dangerous if already pushed) aliases
 
 ## RubyGems
@@ -317,11 +317,11 @@ files contain key mappings as well (TODO: probably will move them out to skwp-ke
 #### RSI-reduction
 
  * `Cmd-k` and `Cmd-d` to type underscores and dashes (use Shift), since they are so common in code but so far away from home row
- * `;` in addition to `:` - avoid Shift for common tasks, just hit semicolon to get to ex mode
- * `,.` to go to last edit location instead of `'.` because the apostrophe is hard on the pinky
+ * `Cmd-k` and `Cmd-d` to type underscores and dashes (use Shift), since they are so common in code but so far away from home row
+ * `Ctrl-l` to insert a => hashrocket (thanks @garybernhardt)
+ * `,.` to go to last edit location (same as `'.`) because the apostrophe is hard on the pinky
  * `Cmd-'` and `Cmd-"` to change content inside quotes
  * Cmd-Space to autocomplete. Tab for snipmate snippets.
- * `fd` and `jk` key *chords* - hit the first two homerow buttons simultaneously on either side of the keyboard to go to beginning and end of line
  * `,ci` to change inside any set of quotes/brackets/etc
 
 #### Tab Navigation
@@ -333,7 +333,7 @@ files contain key mappings as well (TODO: probably will move them out to skwp-ke
 
  * `Ctrl-h,l,j,k` - to move left, right, down, up between windows
  * `Q` - Intelligent Window Killer. Close window `wincmd c` if there are multiple windows to same buffer, or kill the buffer `bwipeout` if this is the last window into it.
- * `+` and `-` for resizing vertical windows
+ * Arrow keys - resize windows (up/down for vertical, left=make smaller horizontally, right=make bigger horizontally)
 
 #### Splits
 
@@ -351,7 +351,8 @@ files contain key mappings as well (TODO: probably will move them out to skwp-ke
 #### Utility
 
  * `,ig` - toggle visual indentation guides
- * `,cf` - Copy Filename of current file into system (not vi) paste buffer
+ * `,cf` - Copy Filename of current file (full path) into system (not vi) paste buffer
+ * `,cn` - Copy Filename of current file (name only, no path)
  * `,vc` - (Vim Command) copies the command under your cursor and executes it in vim. Great for testing single line changes to vimrc.
  * `,yw` - yank a word from anywhere within the word (so you don't have to go to the beginning of it)
  * `,ow` - overwrite a word with whatever is in your yank buffer - you can be anywhere on the word. saves having to visually select it
